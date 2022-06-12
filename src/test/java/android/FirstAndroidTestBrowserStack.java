@@ -12,7 +12,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class AndroidBuiltinAppBrowserStack {
+public class FirstAndroidTestBrowserStack {
     AppiumDriver driver;
     @BeforeClass
     public void setup() throws MalformedURLException {
@@ -22,8 +22,7 @@ public class AndroidBuiltinAppBrowserStack {
         caps.setCapability("platformName", "android");
         caps.setCapability("platformVersion", "11.0");
         caps.setCapability("deviceName", "Samsung Galaxy S21");
-        caps.setCapability("appPackage", "com.android.calculator2");
-        caps.setCapability("appActivity", ".Calculator");
+        caps.setCapability("app","bs://8af81386e6d3234e886da4a4fe82445ab1885131");
 
 
         driver = new AndroidDriver<AndroidElement>(new URL("https://"+userName+":"+accessKey+"@hub-cloud.browserstack.com/wd/hub"), caps);
